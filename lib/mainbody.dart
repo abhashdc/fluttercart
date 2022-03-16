@@ -21,7 +21,7 @@ class _MainBodyState extends State<MainBody> {
 
   List screen = [
     Shop(),
-    Cart(),
+    MyCart(),
   ];
   @override
   Widget build(BuildContext context) {

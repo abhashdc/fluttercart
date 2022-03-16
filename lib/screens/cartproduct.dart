@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import '../data/data.dart';
 
-class Product extends StatefulWidget {
+class CartProduct extends StatefulWidget {
   String? productName;
   int? productPrice, productId;
 
-  Product(
+  CartProduct(
       {required this.productId,
       required this.productName,
       required this.productPrice});
 
   @override
-  State<Product> createState() => _ProductState();
+  State<CartProduct> createState() => _CartProductState();
 }
 
-class _ProductState extends State<Product> {
+class _CartProductState extends State<CartProduct> {
   Cart cartObj = Cart();
 
   @override
@@ -36,11 +36,6 @@ class _ProductState extends State<Product> {
               Text('Rs. ' + widget.productPrice.toString()),
             ],
           ),
-          IconButton(
-              onPressed: () {
-                cartObj.addToCart(widget.productId!);
-              },
-              icon: Icon(Icons.add_shopping_cart))
         ],
       ),
     );
